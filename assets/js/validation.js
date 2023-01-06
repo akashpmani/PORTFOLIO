@@ -3,11 +3,11 @@ function submitbtn(){
     let btn
     var Name=document.getElementById("name").value.trim()
     var mail=document.getElementById("email").value.trim()
-    var Phone=document.getElementById("mobile").value.trim()
+    var mob=document.getElementById("mobile").value.trim()
     var message=document.getElementById("message").value.trim()
     var sub=document.getElementById("subject").value.trim()
 
-    if(Name===""||mail===""||Phone===""||message==="" || sub==="")
+    if(Name===""||mail===""||mob===""||message==="" || sub==="")
     {
         alert("Please fill all fields")
         btn =false;
@@ -17,10 +17,16 @@ function submitbtn(){
         alert("Please re-check at email")
         btn =false;
      }
-     else if(!/^\d+$/.test(Phone))
+     else if(!/^\d+$/.test(mob))
      {
         alert("Please enter your phone number correctly")
         btn =false;
+     }
+     else if(!/^([a-zA-Z]+)$/.test(Name))
+     {
+        alert("Please re-check name")
+        btn =false;
+
      }
 
     return btn;
