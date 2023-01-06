@@ -24,7 +24,7 @@ function submitbtn(){
      }
      else if(!/^[a-zA-Z]$/.test(name))
      {
-        alert("Please enter your phone number correctly")
+        alert("Please enter your name correctly")
         btn =false;
      }
 
